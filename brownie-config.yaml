@@ -1,0 +1,8 @@
+dependencies:
+  - smartcontractkit/chainlink@2.0.0
+  - OpenZeppelin/openzeppelin-contracts@4.1.0
+compiler:
+  solc:
+    remappings:
+      - "@chainlink=smartcontractkit/chainlink@2.0.0"
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.1.0"
