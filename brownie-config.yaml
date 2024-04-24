@@ -1,8 +1,22 @@
 dependencies:
-  - smartcontractkit/chainlink@2.0.0
-  - OpenZeppelin/openzeppelin-contracts@4.1.0
+  - OpenZeppelin/openzeppelin-contracts@4.5.0
+  - smartcontractkit/chainlink-brownie-contracts@1.1.1
+
 compiler:
   solc:
+    version: 0.8.20
     remappings:
-      - "@chainlink=smartcontractkit/chainlink@2.0.0"
-      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.1.0"
+      - '@openzeppelin=$HOME/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.5.0'
+      - '@chainlink=$HOME/.brownie/packages/smartcontractkit/chainlink-brownie-contracts@1.1.1'
+
+
+networks:
+  default: development
+  ganache-local:
+    host: http://127.0.0.1:8545
+    chain_id: 1337
+
+dotenv: .env
+
+wallets:
+  from_key: ${PRIVATE_KEY}
